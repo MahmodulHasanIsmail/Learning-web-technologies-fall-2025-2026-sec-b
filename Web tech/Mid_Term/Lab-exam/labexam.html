@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exam</title>
+</head>
+
+<body>
+    <form action="" enctype="" value="" id="f1">
+        <table>
+            <tr>
+                <td>
+                    <input type="text" name="" value="" id="inp1">
+                    <input type="button" id="btn1" value="+">
+                    <div id="newinput"></div>
+                </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="save" id="savebtn"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="error"></p>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+
+
+    document.getElementById('btn1').addEventListener('click', adding)
+
+    function adding() {
+        let msg = document.getElementById('inp1').value;
+        let wmsg = document.getElementById('error');
+        let inpfield = document.getElementById('newinput');
+
+
+
+        if (msg !== "") {
+            if (msg === 'username') {
+                let newField = document.createElement('input');
+                newField.type = "text";
+                newField.placeholder = "Enter new username";
+                inpfield.appendChild(newField);
+                document.getElementById('inp1').value = "";
+            }
+
+            if (msg === 'mobile') {
+                let newField = document.createElement('input');
+                newField.type = "text";
+                newField.placeholder = "Enter your mobile number";
+                inpfield.appendChild(newField);
+                document.getElementById('inp1').value = "";
+            }
+            if (msg === 'password') {
+                let newField = document.createElement('input');
+                newField.type = "password";
+                newField.placeholder = "Enter your password";
+                inpfield.appendChild(newField);
+                document.getElementById('inp1').value = "";
+            }
+        }
+
+
+
+
+
+
+    }
+</script>
+
+</html>
